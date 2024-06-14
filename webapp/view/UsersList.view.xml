@@ -1,4 +1,4 @@
-<mvc:View controllerName="sap.ui.demo.walkthrough.controller.InvoiceList" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+<mvc:View controllerName="sap.ui.demo.walkthrough.controller.UsersList" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 <Button class="create-user-btn" text="Create User" press="onClickToCreationUser"/>
   <VBox>
         <Table id="userTable" items="{user>/}">

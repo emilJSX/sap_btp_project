@@ -2,19 +2,25 @@
   controllerName="sap.ui.demo.walkthrough.controller.Login"
   xmlns="sap.m"
   xmlns:mvc="sap.ui.core.mvc">
-  <VBox>
-    <Input
-      id="username"
-      type="Text"
-      placeholder="Введите имя пользователя..."
-      value="{login>/username}" />
-    <Input
-      id="password"
-      type="Password"
-      placeholder="Введите пароль..."
-      value="{login>/password}" />
-    <Button
-      text="Login"
-      press="onLoginPress" />
+  
+  <VBox justifyContent="Center" alignItems="Center" fitContainer="true" class="loginContainer">
+    <Title text="Login System" level="H1" />
+    <VBox width="300px" alignItems="Center">
+      <Input
+        id="username"
+        type="Text"
+        placeholder="Type your username..."
+        value="{login>/username}" 
+        width="100%"/>
+      <Input
+        id="password"
+        type="Password"
+        placeholder="Type your password..."
+        value="{login>/password}" 
+        width="100%"/>
+      <Button
+        text="Login"
+        press="onLoginPress" />
+    </VBox>
   </VBox>
 </mvc:View>

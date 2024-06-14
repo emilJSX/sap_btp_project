@@ -9,7 +9,7 @@ sap.ui.define([
 ], function (Controller, JSONModel, formatter, Filter, FilterOperator, MessageBox, MessageToast) {
     "use strict"
 
-    return Controller.extend("sap.ui.demo.walkthrough.controller.InvoiceList", {
+    return Controller.extend("sap.ui.demo.walkthrough.controller.UsersList", {
         formatter: formatter,
         onInit: function () {
             var oModel = new sap.ui.model.json.JSONModel("http://localhost:3000/api/users");
@@ -44,18 +44,6 @@ sap.ui.define([
             oRouter.navTo("userCreation");
         },
 
-        onFilterInvoices: function (oEvent) {
-
-            var aFilter = [];
-            var sQuery = oEvent.getParameter("query");
-            if (sQuery) {
-                aFilter.push(new Filter("ProductName", FilterOperator.Contains, sQuery));
-            }
-
-            var oList = this.byId("invoiceList");
-            var oBinding = oList.getBinding("items");
-            oBinding.filter(aFilter);
-        },
         onPress: function () {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
             oRouter.navTo("detail");

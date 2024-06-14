@@ -4,7 +4,7 @@
     xmlns:mvc="sap.ui.core.mvc">
     <Page title="{i18n>homePageTitle}">
     <content>
-        <mvc:XMLView viewName="sap.ui.demo.walkthrough.view.InvoiceList"/>
+        <mvc:XMLView viewName="sap.ui.demo.walkthrough.view.UsersList"/>
     </content>
     </Page>
 </mvc:View>
