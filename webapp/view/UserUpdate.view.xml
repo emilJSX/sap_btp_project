@@ -1,0 +1,36 @@
+<mvc:View
+    controllerName="sap.ui.demo.walkthrough.controller.UserEdit"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    <Button text="Delete User"  press="onDeleteUser" class="delete-user" type="Reject"/>
+    <Button text="Back" press="onGoHome"/>
+    <f:SimpleForm id="userForm" layout="ResponsiveGridLayout" title="Edit User">
+        <f:content>
+            <Label text="Username"/>
+            <Input value="{user>/username}"/>
+            <Label text="Email"/>
+            <Input value="{user>/email}"/>
+            <Label text="Password"/>
+            <Input value="{user>/password}"/>
+            <Label text="Role"/>
+            <Select selectedKey="{user>/role}">
+                <items>
+                    <core:Item key="Admin" text="Admin"/>
+                    <core:Item key="Redactor" text="Redactor"/>
+                    <core:Item key="Moderator" text="Moderator"/>
+                    <core:Item key="Guest" text="Guest"/>
+                </items>
+            </Select>
+            <Label text="Position"/>
+            <Input value="{user>/position}"/>
+            <Label text="Education"/>
+            <Input value="{user>/education}"/>
+            <Label text="Contact Info"/>
+            <Input value="{user>/contactInfo}"/>
+            <Button text="Save Changes" press="onSaveChanges"/>
+            
+        </f:content>
+    </f:SimpleForm>
+</mvc:View>

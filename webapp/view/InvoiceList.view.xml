@@ -1,0 +1,44 @@
+<mvc:View controllerName="sap.ui.demo.walkthrough.controller.InvoiceList" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+<Button class="create-user-btn" text="Create User" press="onClickToCreationUser"/>
+  <VBox>
+        <Table id="userTable" items="{user>/}">
+            <headerToolbar>
+                <Toolbar>
+                    <Title text="User List" />
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column>
+                    <Text text="ID" />
+                </Column>
+                <Column>
+                    <Text text="Username" />
+                </Column>
+                <Column>
+                    <Text text="Email" />
+                </Column>
+                <Column>
+                    <Text text="Role" />
+                </Column>
+                <Column>
+                    <Text text="Created At" />
+                </Column>
+                <Column>
+                    <Text text="Actions" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{user>id}" />
+                        <Text text="{user>username}" />
+                        <Text text="{user>email}" />
+                        <Text text="{user>role}" />
+                        <Text text="{path: 'user>createdAt', formatter: '.formatter.formatDate'}" />
+                        <Button text="Change" press="onChangePressed"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </VBox>
+</mvc:View>

@@ -1,0 +1,21 @@
+<mvc:View
+  controllerName="sap.ui.demo.walkthrough.controller.UserCreation"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core">
+  <Button text="Back" press="onPressBackBtn" />
+  <VBox class="sapUiSmallMargin">
+  <Page title="{i18n>userCreationTitle}"/>
+    <Input id="usernameInput" placeholder="Username" value="{user>/username}" />
+    <Input id="emailInput" placeholder="Email" value="{user>/email}" type="Email" />
+    <Input id="passwordInput" placeholder="Password" value="{user>/password}" type="Password" />
+    <Label text="Role in system" />
+    <Select id="roleSelect" selectedKey="{user>/role}" items="{roles>/roles}">
+      <core:Item key="{roles>key}" text="{roles>text}" />
+    </Select>
+    <Input id="positionInput" placeholder="Position" value="{user>/position}" />
+    <Input id="educationInput" placeholder="Education" value="{user>/education}" />
+    <Input type="number" id="contactInfoInput" placeholder="Contact Info" value="{user>/contactInfo}" />
+    <Button text="Create User" press="onCreateUser" />
+  </VBox>
+</mvc:View>

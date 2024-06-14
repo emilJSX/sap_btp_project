@@ -1,0 +1,20 @@
+<mvc:View
+  controllerName="sap.ui.demo.walkthrough.controller.Login"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  <VBox>
+    <Input
+      id="username"
+      type="Text"
+      placeholder="Введите имя пользователя..."
+      value="{login>/username}" />
+    <Input
+      id="password"
+      type="Password"
+      placeholder="Введите пароль..."
+      value="{login>/password}" />
+    <Button
+      text="Login"
+      press="onLoginPress" />
+  </VBox>
+</mvc:View>
