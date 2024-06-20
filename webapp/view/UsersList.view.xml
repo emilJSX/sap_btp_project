@@ -34,7 +34,7 @@
                         <Text text="{user>username}" />
                         <Text text="{user>email}" />
                         <Text text="{user>role}" />
-                        <Text text="{path: 'user>createdAt', formatter: '.formatter.formatDate'}" />
+                        <Text text="{path: 'user>created_at', formatter: '.formatter.formatDate'}" />
                         <Button text="Change" press="onChangePressed"/>
                     </cells>
                 </ColumnListItem>

@@ -38,7 +38,7 @@ sap.ui.define([
 
         _loadListData: function () {
             var oListModel = this.getView().getModel("user");
-            oListModel.loadData("http://localhost:3000/api/users");
+            oListModel.loadData("http://127.0.0.1:8000/user");
         },
 
         onCreateUser: function () {
@@ -51,7 +51,7 @@ sap.ui.define([
             }
 
             $.ajax({
-                url: "http://localhost:3000/api/users",
+                url: "http://127.0.0.1:8000/user-creation",
                 method: "POST",
                 contentType: "application/json",
                 data: JSON.stringify(oData),
@@ -64,7 +64,7 @@ sap.ui.define([
                         role: "",
                         position: "",
                         education: "",
-                        contactInfo: ""
+                        contact_info: ""
                     });
                 },
                 error: function () {

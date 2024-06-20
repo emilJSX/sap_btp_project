@@ -12,7 +12,7 @@ sap.ui.define([
     return Controller.extend("sap.ui.demo.walkthrough.controller.UsersList", {
         formatter: formatter,
         onInit: function () {
-            var oModel = new sap.ui.model.json.JSONModel("http://localhost:3000/api/users");
+            var oModel = new sap.ui.model.json.JSONModel("http://127.0.0.1:8000/users");
             this.getView().setModel(oModel, "users");
             var oModel = new JSONModel({
                 username: "",
@@ -28,7 +28,7 @@ sap.ui.define([
 
         _loadListData: function () {
             var oListModel = this.getView().getModel("user");
-            oListModel.loadData("http://localhost:3000/api/users"); 
+            oListModel.loadData("http://127.0.0.1:8000/users"); 
         },
 
         onChangePressed: function (oEvent) {

@@ -1,12 +1,12 @@
 {
-  "name": "sap-ui5-walkthrough",
+  "name": "ui5-module",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "UI5 Module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "fiori run --open 'index.html'",
+    "build": "ui5 build --all"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "@ui5/cli": "^2.14.14"
+  }
 }

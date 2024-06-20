@@ -15,7 +15,7 @@
     </Select>
     <Input id="positionInput" placeholder="Position" value="{user>/position}" />
     <Input id="educationInput" placeholder="Education" value="{user>/education}" />
-    <Input type="number" id="contactInfoInput" placeholder="Contact Info" value="{user>/contactInfo}" />
+    <Input type="number" id="contactInfoInput" placeholder="Contact Info" value="{user>/contact_info}" />
     <Button text="Create User" press="onCreateUser" />
   </VBox>
 </mvc:View>

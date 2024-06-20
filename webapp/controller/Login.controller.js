@@ -22,7 +22,7 @@ sap.ui.define([
             var sPassword = oModel.getProperty("/password");
 
             $.ajax({
-                url: "http://localhost:3000/api/login",
+                url: "http://127.0.0.1:8000/login",
                 method: "POST",
                 contentType: "application/json",
                 data: JSON.stringify({

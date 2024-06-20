@@ -1,0 +1,9 @@
+---
+applications:
+- name: sap-ui5-walkthrough
+  memory: 256M
+  instances: 1
+  path: .
+  buildpack: nodejs_buildpack
+  env:
+    SAP_JWT_TRUST_ACL: '[{"clientid":"*","identityzone":"*"}]'

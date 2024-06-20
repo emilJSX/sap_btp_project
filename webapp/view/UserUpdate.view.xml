@@ -28,7 +28,7 @@
             <Label text="Education"/>
             <Input value="{user>/education}"/>
             <Label text="Contact Info"/>
-            <Input value="{user>/contactInfo}"/>
+            <Input value="{user>/contact_info}"/>
             <Button text="Save Changes" press="onSaveChanges"/>
             
         </f:content>

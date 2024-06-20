@@ -32,7 +32,7 @@ sap.ui.define([
             var sUserId = oModel.getProperty("/id");
 
             jQuery.ajax({
-                url: "http://localhost:3000/api/users/" + sUserId,
+                url: "http://127.0.0.1:8000/users/" + sUserId,
                 method: "DELETE",
                 success: function (response) {
                     sap.m.MessageToast.show("User deleted successfully!");
@@ -60,11 +60,11 @@ sap.ui.define([
                 role: oData.role,
                 position: oData.position,
                 education: oData.education,
-                contactInfo: oData.contactInfo
+                contact_info: oData.contact_info
             };
 
             jQuery.ajax({
-                url: "http://localhost:3000/api/users/" + oData.id,
+                url: "http://127.0.0.1:8000/users/" + oData.id,
                 method: "PUT",
                 contentType: "application/json",
                 data: JSON.stringify(userData),
@@ -82,7 +82,7 @@ sap.ui.define([
             this.getView().setModel(oViewModel, "user");
             jQuery.ajax({
                 type: "GET",
-                url: "http://localhost:3000/api/users/" + userId,
+                url: "http://127.0.0.1:8000/users/" + userId,
                 success: function (data) {
                     oViewModel.setData(data);
                 },
